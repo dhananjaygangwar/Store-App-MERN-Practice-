@@ -1,13 +1,15 @@
 import express from 'express';
 import dotenv from "dotenv";
 import { connectDB } from './config/db.js';
+import Product from "./models/product.model.js"
 
 dotenv.config();
 
 const app = express();
 
+app.use(express.json());//middlewar for json data in body
 
-app.post("/products", async (req,res) => {
+app.post("/api/products", async (req,res) => {
     const product = req.body;// user send this data
 
     if(!product.name || !product.price || !product.image){
@@ -24,6 +26,11 @@ app.post("/products", async (req,res) => {
         res.status(500).json({ success: false,message: "Server Error"});
     }
 });
+
+app.delete("/api/products/:id", async (req, res) => {
+    
+})
+
 
 
 app.listen(5000,() => {
