@@ -6,8 +6,7 @@ import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 
 
-function App() {
- 
+function App() { 
 
   return (
     <Box minH={"100vh"} bg={useColorModeValue("gray.100","gray.900")}>
@@ -15,7 +14,6 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/create" element={<CreatePage/>} />
-
       </Routes>
     
     </Box>
