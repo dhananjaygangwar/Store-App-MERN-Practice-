@@ -39,6 +39,7 @@ const CreatePage = () => {
         isClosable: true,
       });
     }
+    setNewProduct({ name: "", price: "", image: "" }); // clears the textboxes after product created succesfully
   };
 
   return (
