@@ -1,4 +1,6 @@
-import { Container, Link, Text, VStack } from '@chakra-ui/react';
+import { Container, Text, VStack } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+
 
 
 const HomePage = () => {
@@ -15,10 +17,10 @@ const HomePage = () => {
           Current Products 
         </Text>
 
-        <Text fonstSize="x1" textAlign={"center"} fontWeight='bold' color='gray.50'>
-          No Products found {":("}
+        <Text fontSize="xl" textAlign={"center"} fontWeight='bold' color='gray.50'>
+          No Products found 🥲 {""}
           <Link to={"/create"}>
-            <Text as='span' ml={2} color='blue.400' textDecoration='underline'>
+            <Text as='span' ml={2} color='blue.500' _hover={{ textDecoration: "underline" }}>
               Create a Product
             </Text>
           </Link>
